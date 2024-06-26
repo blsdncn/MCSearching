@@ -1,5 +1,6 @@
 package me.blsdncn.mcsearching;
 
+import me.blsdncn.CommandHander.CommandHandler;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class MCSearching extends JavaPlugin {
@@ -8,6 +9,8 @@ public final class MCSearching extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         getLogger().info("Starting up");
+        CommandHandler cmdHandler = new CommandHandler();
+        this.getCommand("PathFind").setExecutor(cmdHandler);
 
     }
 

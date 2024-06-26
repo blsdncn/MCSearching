@@ -1,0 +1,4 @@
+name: MCSearching
+version: '${project.version}'
+main: me.blsdncn.mcsearching.MCSearching
+api-version: '1.21'

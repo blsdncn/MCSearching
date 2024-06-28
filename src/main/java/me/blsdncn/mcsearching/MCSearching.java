@@ -9,7 +9,7 @@ public final class MCSearching extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         getLogger().info("Starting up");
-        CommandHandler cmdHandler = new CommandHandler();
+        CommandHandler cmdHandler = new CommandHandler(this);
         this.getCommand("PathFind").setExecutor(cmdHandler);
 
     }

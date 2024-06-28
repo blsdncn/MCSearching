@@ -2,6 +2,7 @@ package me.blsdncn.mcsearching;
 
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.entity.ArmorStand;
 
 import java.util.Objects;
 
@@ -11,7 +12,7 @@ public class Node {
     private double hCost; // Heuristic cost to goal
     private Node parent;
     private boolean traversable;
-
+    private ArmorStand armorStand;
 
     public Node(int x, int y, int z, double gCost, double hCost, Node parent) {
         this.x = x;
@@ -21,6 +22,7 @@ public class Node {
         this.hCost = hCost;
         this.parent = parent;
         this.traversable = false;
+        this.armorStand = null;
     }
 
     public double getgCost() {
@@ -60,6 +62,22 @@ public class Node {
 
     public void setTraversable(boolean traversable) {
         this.traversable = traversable;
+    }
+
+    public void setgCost(double gCost) {
+        this.gCost = gCost;
+    }
+
+    public void setParent(Node parent) {
+        this.parent = parent;
+    }
+
+    public ArmorStand getArmorStand() {
+        return armorStand;
+    }
+
+    public void setArmorStand(ArmorStand armorStand) {
+        this.armorStand = armorStand;
     }
 
     @Override
